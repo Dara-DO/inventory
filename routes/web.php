@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\CategoriesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +29,4 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/template', function() {
-    return view('layouts.master');
-});
+Route::resource('categories', CategoriesController::class);
