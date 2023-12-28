@@ -1,0 +1,11 @@
+php artisan make:model Category -m
+add coloum: create_categories_table
+	$table->id();
+        $table->string(column: 'name', length:50);
+        $table->timestamps();
+php artisan make:controller CategoriesController -r
+
+
+git add .
+git commint -m "2nd"
+git push
